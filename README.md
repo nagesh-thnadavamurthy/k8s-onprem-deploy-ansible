@@ -31,11 +31,11 @@ defined in a config map.
 Create a file in the repository named `metallb-config.yaml` with the following contents (replacing the IP addresses):
 
 ```
-apiVersion: metallb.io/v1beta1
+apiVersion: xxxx.io/v1beta1
 kind: IPAddressPool
 metadata:
   name: default
-  namespace: metallb-system
+  namespace: <name-sapce-goes-here>
 spec:
   addresses:
     - 192.168.0.150-192.168.0.170
@@ -44,7 +44,7 @@ apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
 metadata:
   name: l2advertisement
-  namespace: metallb-system
+  namespace: <name-sapce-goes-here>
 spec:
   ipAddressPools:
    - default
